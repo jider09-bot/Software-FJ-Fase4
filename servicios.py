@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-# Creamos este error por si meten horas o dias negativos
+# Cree este error por si meten horas o dias negativos
 class CalculoInconsistenteError(Exception):
     pass
 
