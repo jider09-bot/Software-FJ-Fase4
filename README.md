@@ -23,3 +23,21 @@ Este archivo contiene la base del sistema y las reglas de seguridad:
 Aquí manejamos el catálogo de lo que ofrece la empresa:
 * **Clase Abstracta `Servicio`:** Define cómo debe ser un servicio en general.
 * **Herencia y Polimorfismo:** Creamos las subclases `ServicioSala`, `ServicioEquipo` y `ServicioAsesoria`. Cada una calcula su costo de forma diferente (por ejemplo, el equipo tiene un descuento si se alquila por 5 días o más, y la asesoría tiene un cobro fijo extra por honorarios).
+
+### 3. `reserva.py`
+Este archivo gestiona el ciclo de vida completo de una reserva:
+**Clase `Reserva`**: Une un Cliente con un Servicio y maneja los estados: **PENDIENTE → CONFIRMADA → COMPLETADA o CANCELADA**.
+**Confirmación con** `try/except/else/finally`: El bloque try verifica disponibilidad y calcula el costo; el else confirma la reserva si todo salió bien; el finally garantiza que siempre quede registro en el log.
+**Encadenamiento de excepciones:** Si ocurre un ServicioNoDisponibleError, se relanza como ReservaInvalidaError usando raise ... from e, conservando la causa original.
+
+### 4. `main.py`
+Este es el punto de entrada del sistema donde se simulan todas las operaciones:
+**Simulación de 20 operaciones:** Divididas en tres bloques — clientes, servicios y reservas — mezclando casos exitosos e inválidos para demostrar que el sistema no se cae ante errores.
+**Manejo global de excepciones:** El programa principal usa `try/except` para capturar `KeyboardInterrupt` y cualquier Exception inesperada, cerrando el sistema de forma ordenada.
+**Resumen final:** Al terminar, imprime el total de clientes, servicios y reservas registradas clasificadas por estado.
+
+### 5. `logger.py`
+Este archivo es el sistema de registro de eventos:
+**Clase Logger:** Guarda en el archivo `sistema_softwarefj`.log todos los eventos importantes de la ejecución, conservando el historial entre sesiones.
+**Niveles de Registro:** Clasifica cada evento en cinco niveles de severidad: `DEBUG, INFO, ADVERTENCIA, ERROR y CRITICO.`
+**Protección ante fallos:** Si ocurre un error al escribir en el archivo, se ignora silenciosamente para que el logger nunca provoque el cierre del sistema.
