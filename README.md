@@ -1,16 +1,16 @@
 Proyecto de programación Fase 4 - Sistema de reservas
 # Proyecto Fase 4 - Sistema de Reservas "Software FJ"
 
-## 👥 Integrantes del Equipo
+##  Integrantes del Equipo
 * Jaider Yair Morales Pantoja
 * Nelson Bryan Rosero Vásquez
 * Frankin Ademar Ruiz Torres
 * Edison David López Mirama
 
-## 📝 Descripción del Proyecto
+##  Descripción del Proyecto
 Este repositorio contiene el desarrollo de la Fase 4 para la empresa Software FJ. Es un sistema basado en Programación Orientada a Objetos en Python, diseñado sin bases de datos, el objetivo principal del proyecto es aplicar conceptos de herencia, polimorfismo, encapsulamiento y, sobre todo, implementar un manejo robusto de excepciones para que el programa siga funcionando ante cualquier error.
 
-## 📂 Archivos y Avances del Código
+##  Archivos y Avances del Código
 Hasta el momento, el sistema está dividido en módulos para facilitar el trabajo en equipo. Estos son los archivos desarrollados y su función:
 
 ### 1. `cliente_y_excepciones.py`
