@@ -35,6 +35,11 @@ Este es el punto de entrada del sistema donde se simulan todas las operaciones:
 **Simulación de 20 operaciones:** Divididas en tres bloques — clientes, servicios y reservas — mezclando casos exitosos e inválidos para demostrar que el sistema no se cae ante errores.
 **Manejo global de excepciones:** El programa principal usa `try/except` para capturar `KeyboardInterrupt` y cualquier Exception inesperada, cerrando el sistema de forma ordenada.
 **Resumen final:** Al terminar, imprime el total de clientes, servicios y reservas registradas clasificadas por estado.
+Simulaciones de Clientes: Se realizan pruebas con clientes válidos e inválidos para verificar las validaciones del documento y el correcto manejo de excepciones personalizadas.
+Simulaciones de Servicios: Se prueban distintos tipos de servicios (ServicioSala, ServicioEquipo y ServicioAsesoria) validando cálculos de costos, disponibilidad y restricciones de uso.
+Simulaciones de Reservas: Se crean reservas exitosas y fallidas para comprobar el funcionamiento de confirmaciones, cancelaciones y procesamiento de pagos.
+Manejo de Excepciones: Durante las simulaciones se generan errores controlados como duraciones negativas, servicios no disponibles y datos faltantes, garantizando que el sistema continúe funcionando sin detenerse.
+Validación de Robustez: Las 10 simulaciones permiten demostrar que el sistema mantiene estabilidad, registra errores y responde correctamente ante diferentes escenarios reales.
 
 ### 5. `logger.py`
 Este archivo es el sistema de registro de eventos:
